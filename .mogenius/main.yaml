@@ -31,5 +31,9 @@ envVars:
   - name: MB_DB_HOST
     value: post
     type: HOSTNAME
-ports: []
+ports:
+  - portType: HTTPS
+    internalPort: 3000
+    externalPort: 80
+    expose: true
 
