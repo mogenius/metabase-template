@@ -25,6 +25,9 @@ envVars:
   - name: MB_DB_NAME
     value: database
     type: PLAINTEXT
+  - name: MB_DB_TYPE
+    value: postgres
+    type: PLAINTEXT
   - name: MB_DB_PORT
     value: "5432"
     type: PLAINTEXT
