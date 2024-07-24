@@ -22,7 +22,7 @@ envVars:
   - name: MB_DB_USER
     value: posgres-user
     type: PLAINTEXT
-  - name: MB_DB_NAME
+  - name: MB_DB_DBNAME
     value: database
     type: PLAINTEXT
   - name: MB_DB_TYPE
