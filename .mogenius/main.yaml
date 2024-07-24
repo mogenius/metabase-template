@@ -1,0 +1,35 @@
+serviceType: Deployment
+displayName: metro
+dockerfileName: Dockerfile
+dockerContext: .
+k8sSettings:
+  limitCpuCores: 0
+  limitMemoryMB: 0
+  ephemeralStorageMB: 0
+  replicaCount: 1
+  deploymentStrategy: recreate
+  imagePullPolicy: IfNotPresent
+  probesOn: false
+envVars:
+  - name: MB_DB_PASS
+    type: KEY_VAULT
+  - name: MB_DB_FILE
+    value: /metabase-data/metabase.db
+    type: PLAINTEXT
+  - name: volumeMount-og3j8tftn1pqe74814y7zus
+    value: storagestoragestoragestoragestorag:/metabase:/metabase-data
+    type: VOLUME_MOUNT
+  - name: MB_DB_USER
+    value: posgres-user
+    type: PLAINTEXT
+  - name: MB_DB_NAME
+    value: database
+    type: PLAINTEXT
+  - name: MB_DB_PORT
+    value: "5432"
+    type: PLAINTEXT
+  - name: MB_DB_HOST
+    value: post
+    type: HOSTNAME
+ports: []
+
